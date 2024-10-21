@@ -102,12 +102,15 @@
 
     <!-- Medicine Verification Section -->
     <section id="verify">
+        <center>
         <h2>Verify Medicine Expiry by Batch Number</h2>
         <p>Enter the batch number from your medicine packaging to verify its expiry date and authenticity.</p>
+        
         <form>
             <input type="text" id="batchNumber" class="batch-input" placeholder="Enter Batch Number">
             <button type="button" class="search-button" onclick="verifyBatch()">Verify</button>
         </form>
+        </center>
         <p id="verificationResult"></p>
         <script>
             function verifyBatch() {
