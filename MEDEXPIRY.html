@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MEDEXPRIY & RESEARCH</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        section {
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .cta-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+        .batch-input {
+            padding: 10px;
+            width: 300px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>MEDEXPIRY</h1>
+        <p>Your solution to ensure safe and verified medicine</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#verify">Verify Medicine</a>
+        <a href="#knowledge">Medicine Knowledge</a>
+        <a href="#fake-medicine">Against Fake Brands</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Welcome to Our Medicine Verification System</h2>
+        <p>We help you verify your medicine’s expiry date and authenticity using batch numbers. We also provide crucial information on how and when to use various medications. Fight against fake brands with our trusted database.</p>
+        <a href="#verify" class="cta-button">Check Your Medicine</a>
+    </section>
+
+    <!-- Medicine Verification Section -->
+    <section id="verify">
+        <h2>Verify Medicine Expiry by Batch Number</h2>
+        <p>Enter the batch number from your medicine packaging to verify its expiry date and authenticity.</p>
+        <form>
+            <input type="text" id="batchNumber" class="batch-input" placeholder="Enter Batch Number">
+            <button type="button" class="search-button" onclick="verifyBatch()">Verify</button>
+        </form>
+        <p id="verificationResult"></p>
+        <script>
+            function verifyBatch() {
+                var batchNumber = document.getElementById("batchNumber").value;
+                // This is a placeholder for real verification logic
+                if (batchNumber === "4B50383") {
+                    document.getElementById("verificationResult").innerText = "CETIRIZINE: Medicine is valid and expires on 2027-03.";
+                } else {
+                    document.getElementById("verificationResult").innerText = "Invalid batch number or medicine not found.";
+                }
+            }
+        </script>
+    </section>
+
+    <!-- Medicine Knowledge Section -->
+    <section id="knowledge">
+        <h2>Medicine Knowledge: When to Take and Avoid</h2>
+        <p>Find out when to take your medications and when to avoid them, along with possible side effects and drug interactions.</p>
+        <ul>
+            <li><strong>Paracetamol:</strong> Safe to take for mild pain and fever. Avoid if you have liver disease.</li>
+            <li><strong>Ibuprofen:</strong> Use for inflammation and pain relief. Avoid if you have stomach ulcers or are pregnant.</li>
+            <li><strong>Antibiotics:</strong> Take only when prescribed. Avoid if allergic or without a doctor's supervision.</li>
+            <li><strong>Aceclofenac:</strong> To relieve pain and inflammation in conditions such as rhematoid arthritis, ankylosing spondylitis and osteoarthritis.</li>
+            <li><strong>Diclofenac:</strong> Is a nonsteroidal anti-inflammatory drug (NSAID) used to treat mild-to-moderate pain, and helps to relieve symptoms of arthritis (eg, osteoarthritis or rheumatoid arthritis), such as inflammation, swelling, stiffness, and joint pain.</li>
+            <li><strong>cetirizine:</strong> Is used to temporarily relieve the symptoms of hay fever and allergy to other substances. These symptoms include sneezing; runny nose; itchy, red, watery eyes; and itchy nose or throat.</li>
+        </ul>
+    </section>
+
+    <!-- Fighting Fake Brands Section -->
+    <section id="fake-medicine">
+        <h2>Solution Against Fake Medicine Brands</h2>
+        <p>We are committed to fighting fake medicine brands by providing accurate batch number verification. Here’s how we help protect your health:</p>
+        <ul>
+            <li>Check your medicine batch number to ensure authenticity.</li>
+            <li>Learn about the dangers of counterfeit drugs and how they impact your health.</li>
+            <li>Report suspicious products directly to us for further investigation.</li>
+        </ul>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Medicine Verification Platform. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
